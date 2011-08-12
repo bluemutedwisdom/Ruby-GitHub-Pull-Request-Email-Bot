@@ -17,11 +17,12 @@ How do I get it up and running?
 
 Make sure you have the following gems installed:
 
-  * HTTParty
-  * Mustache
-  * Pony
+  * Octocat Herder (octocat_herder)
+  * Mustache (mustache)
+  * Pony (pony)
 
-Should be as simple as running `gem install httparty mustache pony`.
+If you have bundler available, it should be as simple as running
+`bundle install`.
 
 Copy `config.sample.yaml` to `config.yaml`, and edit to taste.
 
