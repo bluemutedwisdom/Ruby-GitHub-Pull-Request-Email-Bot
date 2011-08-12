@@ -9,7 +9,8 @@ require 'octocat_herder/pull_request'
 describe PullRequestBot do
   before :each do
     OctocatHerder::Connection.stubs(:get)
-#    Pony.stubs(:mail)
+    OctocatHerder::PullRequest.any_instance.stubs(:diff_text).returns('diff text')
+    OctocatHerder::PullRequest.any_instance.stubs(:patch_text).returns('patch text')
     ARGV.clear
   end
 
