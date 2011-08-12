@@ -61,7 +61,10 @@ class PullRequestBot
     pull_requests = filter_seen_requests(status, recorded_requests, pull_requests)
     return if pull_requests.empty?
 
-    pull_requests = pull_requests.map {|p| p.to_hash}
+    pull_requests = pull_requests.map do |p|
+      p.get_detail
+      p.to_hash
+    end
 
     if settings['group_pull_request_updates']
       template_prefix = 'group'
