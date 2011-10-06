@@ -2,11 +2,12 @@
   <head>
   </head>
   <body>
-    <p>Greetings!</p>
+    <p>Please review pull request #{{number}}: {{> opened}}</p>
 
-    <p>Please review the pull request #{{number}}: {{> opened}}</p>
+    <p>Description:<br />
+    <br />
+    {{{body_html}}}</p>
 
-    <p>Some more information about the pull request:<br />
     <ul>
       <li>Opened: {{created_at}}</li>
       {{#base}}
@@ -16,13 +17,6 @@
         <li>Requested merge: {{label}} ({{sha}})</li>
       {{/head}}
     </ul>
-
-    <p>Description:<br />
-    <br />
-    {{{body_html}}}</p>
-
-    <p>Thanks!<br />
-    The Pull Request Bot</p>
 
     <p>Diff follows:<br />
     <pre>
